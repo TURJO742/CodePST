@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+    int numbers[16];
+    int even[16], odd[16];
+    int even_count = 0, odd_count = 0;
+    printf("Enter 16 numbers:\n");
+    for (int i = 0; i < 16; i++)
+    {
+        scanf("%d", &numbers[i]);
+    }
+    for (int i = 0; i < 16; i++)
+    {
+        if (numbers[i] % 2 == 0)
+        {
+            even[even_count] = numbers[i];
+            even_count++;
+        }
+        else
+        {
+            odd[odd_count] = numbers[i];
+            odd_count++;
+        }
+    }
+    printf("Even numbers: ");
+    for (int i = 0; i < even_count; i++)
+    {
+        printf("%d ", even[i]);
+    }
+    printf("\n");
+    printf("Odd numbers: ");
+    for (int i = 0; i < odd_count; i++)
+    {
+        printf("%d ", odd[i]);
+    }
+    printf("\n");
+    return 0;
+}
